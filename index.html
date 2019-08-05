@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Hiển thị các số nguyên tố đầu tiên -->
+
+
+
+
+
+
+    <script>
+        let num = parseInt(prompt('Mời bạn nhập số lượng số nguyên tố:'));
+
+        // chạy 1 vòng lặp for để chạy số lượng 20 số nguyên tố bắt đầu từ 0;
+        // tạo 1 function check từng số nguyên tố
+        // nếu function trả về true thì đó là số nguyên tố
+        // false bỏ qua.
+        
+        // ta thấy các số nguyên tố đều là số lẻ,Thực hiện bước nhảy:
+        let dem = 0
+        for(let i = 0 ; dem < num; i++)
+        {   
+            if(kiem_tra_nguyen_to(i))
+            {
+                console.log(i);
+                dem++;
+            }
+        }
+        function kiem_tra_nguyen_to(num)
+        {   
+            if(num < 2)
+            {
+                return true; 
+            }
+            else if(num == 2)
+            {
+                return true;
+            }
+            else if(num%2 ==0)
+            {
+                return false;
+            }
+            else 
+            {
+                for (let i = 3 ; i < num-1;i +=2)
+                {
+                    if(num%i==0)
+                    {
+                        return false;
+                        break;
+                    }
+                }
+            }
+            return true;
+        }
+
+
+        // vì 0 , 1 không là sô nguyên tố.
+        //
+    </script>
+</body>
+
+</html>
